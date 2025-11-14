@@ -1,0 +1,42 @@
+@use '../../../../mixins/center.scss' as *;
+@use '../../../../mixins/scroll.scss' as *;
+
+.container {
+    width: 19rem;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.4rem;
+    padding: 0.3rem;
+    will-change: transform;
+    filter: drop-shadow(0 0 6px rgba(59, 152, 252, 0.7));
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    .login {
+        @include center;
+        @include hide-scroll(scroll, auto);
+
+        width: 100%;
+        overflow-x: scroll;
+        text-align: center;
+        color: rgb(11, 0, 47);
+        font-size: 1.1rem;
+        margin-top: 0.6rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .link {
+        color: var(--global-blue);
+        text-decoration: none;
+        margin-bottom: 0.2rem;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    
+    &.active {
+     transform: scale(1.1);
+     filter: drop-shadow(0 0 10px rgba(59, 152, 252, 0.9));
+    }
+}

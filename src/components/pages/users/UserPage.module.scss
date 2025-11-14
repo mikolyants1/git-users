@@ -1,0 +1,25 @@
+@use '../../../mixins/center.scss' as *;
+
+.container {
+    @include center;
+
+    width: 100%;
+    flex-direction: column;
+
+    .link {
+        &__container {
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+        }
+
+        color: var(--global-blue);
+        text-decoration: none;
+        font-size: 1.3rem;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

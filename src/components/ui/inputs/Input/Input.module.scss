@@ -1,0 +1,28 @@
+$red: rgb(224, 46, 46);
+$blue: rgb(59, 152, 252);
+
+@mixin status($name, $color) {
+    &.#{$name} {
+        border: 1.2px solid $color;
+
+        &:focus {
+            outline: none;
+            filter: drop-shadow(0px 0px 2px $color);
+        }
+    }
+}
+
+.input {
+    @include status("success", $blue);
+    @include status("error", $red);
+    
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    border-radius: 0.3rem;
+    outline: none;
+    color: rgb(60, 60, 60);
+
+   &::placeholder {
+      color: rgb(168, 168, 168);
+   }
+}

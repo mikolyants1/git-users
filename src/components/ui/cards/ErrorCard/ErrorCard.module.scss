@@ -1,0 +1,32 @@
+.container {
+    width: 100%;
+    margin-top: 3rem;
+    font-size: 1.4em;
+    text-align: center;
+
+  &::after {
+    content: '.';
+    animation-name: points;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes points {
+    0% {
+        content: '.';
+    }
+
+    50% {
+        content: '..';
+    }
+
+    70% {
+        content: '...';
+    }
+    100% {
+        content: '....';
+    }
+}

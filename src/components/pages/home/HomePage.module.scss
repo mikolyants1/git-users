@@ -1,0 +1,14 @@
+@use '../../../mixins/center.scss' as *;
+
+.container {
+   @include center;
+
+   width: 100%;
+   flex-direction: column;
+
+   &__filter {
+     @include center;
+
+     width: 100%;
+   }
+}

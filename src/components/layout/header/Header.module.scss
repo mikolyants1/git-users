@@ -1,0 +1,16 @@
+@use '../../../mixins/center.scss' as *;
+
+.header {
+    @include center;
+
+    width: 100%;
+    background-color: var(--global-blue);
+    height: 5rem;
+    border-radius: 0.3rem;
+
+    &__title {
+        color: white;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+}

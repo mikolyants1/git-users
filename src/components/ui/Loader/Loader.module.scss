@@ -1,0 +1,37 @@
+$loader-color: 10px solid var(--global-blue);
+
+.loader__container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: transparent;
+
+  .loader {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-top: $loader-color;
+    border-left: $loader-color;
+    border-right: $loader-color;
+    border-bottom: 10px solid transparent;
+    animation-iteration-count: infinite;
+    animation-name: load;
+    animation-timing-function: linear;
+    animation-duration: 1.4s;
+    animation-fill-mode: forwards;
+    animation-direction: linear;
+  }
+}
+
+@keyframes load {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

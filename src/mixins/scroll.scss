@@ -1,0 +1,9 @@
+@mixin hide-scroll($x, $y) {
+    overflow-y: $y;
+    overflow-x: $x;
+    scrollbar-width: none !important;
+
+    &::-webkit-scrollbar {
+        display: none !important;
+    }
+}

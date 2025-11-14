@@ -1,0 +1,23 @@
+@use '../../../../mixins/scroll.scss' as *;
+
+.column {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 100%;
+    border-top: 2px solid var(--global-blue);
+    font-size: 1.2rem;
+
+    &__value {
+        @include hide-scroll(scroll, auto);
+
+        padding: 0.5rem;
+    }
+
+    &__name {
+        @include hide-scroll(scroll, auto);
+
+        border-right: 2px solid var(--global-blue);
+        padding: 0.5rem;
+        color: grey;
+    }
+}

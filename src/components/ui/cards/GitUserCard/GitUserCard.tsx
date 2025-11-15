@@ -10,7 +10,8 @@ interface IProps {
 }
 
 const GitUserCard = ({ user }: IProps) => {
-  const { isHover,  handlers} = useHover();
+  const { isHover,  handlers } = useHover();
+
   return (
     <div 
      className={clsx(styles.container, { [styles.active]: isHover })}

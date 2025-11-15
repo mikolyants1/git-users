@@ -1,6 +1,6 @@
 import { IGitUser } from "@/types/entities.types";
 import styles from './UserPage.module.scss';
-import { GitUserInfoCard } from "@/components/ui/cards/GitUserInfoCard/GitUserInfoCard";
+import { GitUserInfoSection } from "@/components/sections/GitUserInfoSection/GitUserInfoSection";
 import Link from "next/link";
 
 interface IProps {
@@ -15,7 +15,7 @@ export const UserPage = ({ user }: IProps) => {
           Forward home
         </Link>
       </section>
-      <GitUserInfoCard user={user} />
+      <GitUserInfoSection user={user} />
     </main>
   )
 }

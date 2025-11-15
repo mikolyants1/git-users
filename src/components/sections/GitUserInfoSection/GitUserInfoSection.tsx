@@ -1,17 +1,17 @@
 'use client';
 
 import { IGitUser } from '@/types/entities.types'
-import styles from './GitUserInfoCard.module.scss';
-import { LogoCard } from '../LogoCard/LogoCard';
+import styles from './GitUserInfoSection.module.scss';
+import { LogoCard } from '../../ui/cards/LogoCard/LogoCard';
 import { useMemo } from 'react';
 import { GitUserInfoUtils } from '@/utils/info.utils';
 import { EGitUserInfoRender } from '@/enums/git-user-info.enum';
 
 interface IProps {
-    user: IGitUser;
+  user: IGitUser;
 }
 
-export const GitUserInfoCard = ({ user }: IProps) => {
+export const GitUserInfoSection = ({ user }: IProps) => {
   const userInfo = useMemo(() => GitUserInfoUtils.buildData(user, {
     login: EGitUserInfoRender.DEFAULT,
     html_url: EGitUserInfoRender.DEFAULT,

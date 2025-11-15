@@ -4,11 +4,11 @@ import { GitUsersSection } from "@/components/sections/GitUsersSection/GitUsersS
 
 export const HomePage = () => {
   return (
-    <main className={styles.container}>
+    <div className={styles.container}>
       <section className={styles.container__filter}>
         <FilterInput />
       </section>
       <GitUsersSection />
-    </main>
+    </div>
   )
 }

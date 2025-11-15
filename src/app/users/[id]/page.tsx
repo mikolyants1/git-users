@@ -12,10 +12,10 @@ export default async function Page({ params }: IProps) {
   const user = await GitUsersApi.getGitUser(id);
   
   return (
-    <div className='wrapper'>
-      <main className='page'>
+    <main className='wrapper'>
+      <div className='page'>
         <UserPage user={user} />
-      </main>
-    </div>
+      </div>
+    </main>
   );
 };

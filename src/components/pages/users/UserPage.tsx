@@ -9,13 +9,13 @@ interface IProps {
 
 export const UserPage = ({ user }: IProps) => {
   return (
-    <main className={styles.container}>
+    <div className={styles.container}>
       <section className={styles.link__container}>
         <Link className={styles.link} href={'/'}>
           Forward home
         </Link>
       </section>
       <GitUserInfoSection user={user} />
-    </main>
+    </div>
   )
 }
